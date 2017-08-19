@@ -90,7 +90,7 @@ $(function() {
         beforeEach(function(done) {
             // load feed before testing the spec
             loadFeed(0, function() {
-                feed = $('.header-title').html();
+                feed = $('.feed').html();
                 loadFeed(1, function() { //nested load2 to meet async function demands
                     newfeed = $('.feed').html();
                     done();
