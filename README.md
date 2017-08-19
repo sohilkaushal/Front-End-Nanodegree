@@ -6,12 +6,13 @@
 
 * HTML.
 * CSS.
-* JavaScript(Both basic and object oriented).
+* JavaScript
+  * Basic.
+  * Object Oriented.
 * KnockoutJS.
 * Using Google Maps & other third party API's.
 * Jasmine Testing Suite.
 
 
 
-**Made By:-
-      Sohil Kaushal
+ ###### Made By:- Sohil Kaushal
