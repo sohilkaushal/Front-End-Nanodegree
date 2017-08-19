@@ -56,7 +56,7 @@ $(function() {
 
 
 
-    /* Write a new test suite named "The menu" */
+    /*  Write a new test suite named "The menu" */
     describe('The Menu', function() {
         //checking if the menu elements are hidden or not//
         it('check if menu elements have hidden by default', function() {
@@ -74,7 +74,7 @@ $(function() {
 
 
 
-    /* Write a new test suite named "Initial Entries" */
+    /*  Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
         beforeEach(function(done) {
             loadFeed(0, done);
@@ -84,23 +84,22 @@ $(function() {
             done();
         });
     });
-
-    describe('new feed', function() {
-
+    describe('New Feed Selection', function() {
         var feed;
-        var new_feed;
+        var newfeed;
         beforeEach(function(done) {
-
-            loadFeed(0, function() { //loading before testing
-                feed = $('.feed').html();
-
-                loadFeed(1, function() { //meeting asynch requiremnents
-                    new_feed = $('.feed').html();
+            // load feed before testing the spec
+            loadFeed(0, function() {
+                feed = $('.header-title').html();
+                loadFeed(1, function() { //nested load2 to meet async function demands
+                    $newfeed = $('.header-title').html();
                     done();
-
                 });
             });
-
+        });
+        //check for feed change at Reload
+        it('Feed change at reload', function() {
+            expect(feed).not.toEqual(newfeed); // check for old and new feed to be different
         });
     });
 }());
