@@ -102,16 +102,5 @@ $(function() {
             });
 
         });
-
-        it('feed change', function(done) {
-            var feed = $('.feed').html();
-            expect(feed).not.toEqual(new_feed);
-
-            // check for old and new feed to be different
-        });
     });
-
-
-
-
 }());
